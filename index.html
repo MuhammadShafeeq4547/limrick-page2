@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Home</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            height: max-content;
+            padding: 0px 0px 100px 0px;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 55px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav {
+            width: 97%;
+            height: max-content;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 152px;
+            height: max-content;
+            margin-top: .5%;
+            cursor: pointer;
+        }
+
+        .invato {
+            width: 100%;
+        }
+
+        .button {
+            width: 90px;
+            height: 34px;
+            border-radius: 5px;
+            background-color: #82B440;
+            outline: none;
+            border: none;
+            font-size: 15px;
+            font-weight: 500;
+            color: white;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #7aa93cf4;
+            transition: 0.2s;
+        }
+
+        .navbar2 {
+            width: 100%;
+            height: 154px;
+            background-color: #FFFFFF;
+            position: relative;
+        }
+
+        .p-parent {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .p-nav2 {
+            font-size: 350px;
+            text-align: center;
+            margin-top: -170px;
+            color: #FAFAFA;
+        }
+
+        .nav2 {
+            width: 92%;
+            height: 70px;
+            position: absolute;
+            left: 4%;
+            top: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .icon-head {
+            width: 140px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .fouji {
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .fouji:hover {
+            color: #FF3E79;
+        }
+
+        .nav3 {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo1 {
+            width: 155px;
+            height: max-content;
+        }
+
+        .logo-img {
+            width: 100%;
+        }
+
+        .ul {
+            width: 500px;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bar {
+            font-size: 23px;
+        }
+
+        .lis {
+            list-style: none;
+            font-size: 14px;
+            font-weight: 600;
+            width: max-content;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lis:hover {
+            color: #FF3E79;
+        }
+
+        .dropdown1 {
+            width: 43%;
+            padding: 0px 0px 5px 0px;
+            background-color: white;
+            box-shadow: 2px 2px 10px 2px rgba(128, 128, 128, 0.136);
+            position: absolute;
+            z-index: 1;
+            top: 120%;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .home:hover+.dropdown1 {
+            opacity: 1;
+            visibility: visible;
+            top: 100%;
+        }
+
+        .dropdown1:hover {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+        }
+
+        .ul2 {
+            width: 100%;
+            height: 100%;
+            border-top: 3px solid #FF3E79;
+        }
+
+        .li-p {
+            width: 100%;
+            height: 45px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.403);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .li {
+            list-style: none;
+            margin-left: 10%;
+            font-size: 15px;
+            font-weight: 400;
+            color: rgb(128, 128, 128);
+        }
+
+        .li-p:hover li {
+            color: #FF3E79;
+        }
+
+        .color {
+            width: 0%;
+            height: 100%;
+            background-color: #FF3E79;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .li-p:hover .color {
+            animation: foji .3s linear;
+        }
+
+        @keyframes foji {
+            0% {
+                width: 0%;
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                width: 100%;
+            }
+        }
+
+        .none {
+            border: none;
+        }
+
+        .dropdown2 {
+            width: 43%;
+            padding: 0px 0px 5px 0px;
+            background-color: white;
+            box-shadow: 2px 2px 10px 2px rgba(128, 128, 128, 0.136);
+            position: absolute;
+            z-index: 1;
+            top: 120%;
+            left: 16%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .about:hover+.dropdown2 {
+            opacity: 1;
+            visibility: visible;
+            top: 100%;
+        }
+
+        .dropdown2:hover {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+        }
+
+        .dropdown3 {
+            width: 43%;
+            padding: 0px 0px 5px 0px;
+            background-color: white;
+            box-shadow: 2px 2px 10px 2px rgba(128, 128, 128, 0.136);
+            position: absolute;
+            z-index: 1;
+            top: 120%;
+            left: 33%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .portfolio:hover+.dropdown3 {
+            opacity: 1;
+            visibility: visible;
+            top: 100%;
+        }
+
+        .dropdown3:hover {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+        }
+
+        .dropdown4 {
+            width: 43%;
+            padding: 0px 0px 5px 0px;
+            background-color: white;
+            box-shadow: 2px 2px 10px 2px rgba(128, 128, 128, 0.136);
+            position: absolute;
+            z-index: 1;
+            top: 120%;
+            left: 55%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .blog:hover+.dropdown4 {
+            opacity: 1;
+            visibility: visible;
+            top: 100%;
+        }
+
+        .dropdown4:hover {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+        }
+
+        .navbar-none {
+            width: 100%;
+            height: 90px;
+            background-color: white;
+            box-shadow: 2px 2px 10px 5px rgba(128, 128, 128, 0.206);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .nav4 {
+            width: 96%;
+            height: max-content;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo3 {
+            width: 150px;
+            height: max-content;
+        }
+
+        .button-none {
+            width: 53px;
+            height: 45px;
+            border: 1px solid;
+            outline: none;
+            border: none;
+            font-size: 25px;
+            color: white;
+            background-color: #FF3E79;
+        }
+        .parent-head{
+            width: 750px;
+            border: 1px solid white;
+            margin: auto;
+            margin-top: 7%;
+            position: relative;
+        }
+        .p1{
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            color: gray;
+            margin-top: 3%;
+        }
+        .radius{
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background-color: #FFE991;
+            margin-left: 3%;
+        }
+        .radius2{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 5%;
+            right: 18%;
+            background-color: #A5FFD6;
+        }
+        .h1-design{
+            font-size: 70px;
+            font-weight: 700;
+            text-align: center;
+            position: absolute;
+            top: 15%;
+            left: 5%;
+        }
+        .span2{
+            color: #FFC1FB;
+        }
+        .p-div{
+            width: 85%;
+            height: max-content;
+            margin: auto;
+            margin-top: 2%;
+        }
+        .p2{
+            color: gray;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: -5%;
+        }
+        .button-p{
+            width: 200px;
+            height: 60px;
+            outline: none;
+            border: none;
+            border-radius: 30px;
+            margin-left: 35%;
+            margin-top: 3%;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            transition: 0.3s;
+            background: linear-gradient(90deg, #F08EFA,#CD8CFE);
+        }
+        .button-p:hover{
+            background: linear-gradient(90deg, #CD8CFE,#F08EFA);
+        }
+        .main2{
+            width: 100%;
+            height: max-content;
+        }
+        .grid-parent{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-row: auto;
+        }
+        .box{
+            position: relative;
+        }
+        
+        .img1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .image1{
+            width: 100%;
+            height: 100%;
+        }
+        .bgk-1{
+            width: 90%;
+            height: 80%;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            background-color: white;
+            opacity: 0;
+            transition: .4s;
+            transform: scale(0.5) rotateY(180deg);
+        }
+        .box:hover .bgk-1{
+            animation: anim 1s linear forwards;
+        }
+        @keyframes anim{
+            0%{
+                transform: scale(0.5) rotateY(180deg);
+                opacity: 0;
+            }
+            50%{
+                transform: scale(0.5) rotateY(220deg);
+                opacity: 0;
+            }
+            100%{
+                transform: scale(1) rotateY(0deg);
+                opacity: 1;
+            }
+        }
+        .text{
+            width: 220px;
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            opacity: 0;
+        }
+        .box:hover .text{
+            animation:  anim2 .4s linear forwards;
+            animation-delay: .5s;
+        }
+        @keyframes anim2{
+            0%{
+                top: 50%;
+                opacity: 0;
+            }
+            100%{
+                top: 40%;
+                opacity: 1;
+            }
+        }
+        .p-text{
+            font-size: 19px;
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+        }
+        .p2-text{
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 4%;
+        }
+        .img2{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .image2{
+            width: 100%;
+            height: 100%;
+        }
+        .img3{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .image3{
+            width: 100%;
+            height: 100%;
+        }
+        .img4{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .image4{
+            width: 100%;
+            height: 100%;
+        }
+        .img5{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .image5{
+            width: 100%;
+            height: 100%;
+        }
+        .img6{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .image6{
+            width: 100%;
+            height: 100%;
+        }
+        .img7{
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .text-7{
+            left: 35%;
+        }
+        .image7{
+            width: 100%;
+            height: 100%;
+        }
+        .img8{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .image8{
+            width: 100%;
+            height: 100%;
+        }
+        .img9{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .image9{
+            width: 100%;
+            height: 100%;
+        }
+        .img10{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 4;
+            grid-row-end: 6;
+        }
+        .image10{
+            width: 100%;
+            height: 100%;
+        }
+        .img11{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+        .image11{
+            width: 100%;
+            height: 100%;
+        }
+        .img12{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+        .image12{
+            width: 100%;
+            height: 100%;
+        }
+        .img13{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+        .image13{
+            width: 100%;
+            height: 100%;
+        }
+        .img14{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+        .image14{
+            width: 100%;
+            height: 100%;
+        }
+        .img15{
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+        .image15{
+            width: 100%;
+            height: 100%;
+        }
+        .text-15{
+            left: 35%;
+        }
+        .footer{
+            width: 100%;
+            height: max-content;
+            padding: 50px 0px 50px 0px;
+        }
+        
+        .last-parent{
+            width: 95%;
+            margin: auto;
+        }
+        .logo-last{
+            width: 180px;
+            height: max-content;
+            cursor: pointer;
+            margin: auto;
+        }
+        .l-f{
+            width: 100%;
+        }
+        .p-f{
+            font-size: 15px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 1%;
+        }
+        .last-icon{
+            width: 160px;
+            margin: auto;
+            margin-top: 2.5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .fouji{
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .fouji:hover{
+            color: #FF3272;
+        }
+
+
+
+
+
+
+
+        @media screen and (max-width:1140px) {
+            .nav2 {
+                width: 98%;
+                left: 1%;
+
+            }
+        }
+
+        @media screen and (max-width:1025px) {
+            .nav3 {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .icon-head {
+                display: none;
+            }
+            .parent-head{
+                width: 610px;
+            }
+            .h1-design{
+                font-size: 49px;
+                left: 9%;
+            }
+            .p-div{
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+
+        @media screen and (max-width:995px) {
+            .grid-parent{
+                grid-template-columns: 50% 50%;
+                grid-row: auto;
+            }
+            .img1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .img2{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .img3{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .img4{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .img5{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .img6{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .img7{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 6;
+        }
+        .img8{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 6;
+            grid-row-end: 7;
+        }
+        .img9{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 6;
+            grid-row-end: 7;
+        }
+        .img10{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 7;
+            grid-row-end: 9;
+        }
+        .img11{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 7;
+            grid-row-end: 8;
+        }
+        .img12{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 8;
+            grid-row-end: 9;
+        }
+        .img13{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 9;
+            grid-row-end: 10;
+        }
+        .img14{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 9;
+            grid-row-end: 10;
+        }
+        .img15{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 10;
+            grid-row-end: 11;
+        }
+        }
+
+        @media screen and (max-width:768px) {
+            .navbar2 {
+                display: none;
+            }
+
+            .navbar-none {
+                display: block;
+                display: flex;
+                align-items: center;
+            }
+
+            .nav4 {
+                display: flex;
+                align-items: center;
+            }
+            .grid-parent{
+                grid-template-columns: 100%;
+                grid-row: auto;
+            }
+            .img1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .img2{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .img3{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .img4{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+        .img5{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+        .img6{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 6;
+            grid-row-end: 7;
+        }
+        .img7{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 7;
+            grid-row-end: 8;
+        }
+        .img8{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 8;
+            grid-row-end: 9;
+        }
+        .img9{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 9;
+            grid-row-end: 10;
+        }
+        .img10{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 10;
+            grid-row-end: 11;
+        }
+        .img11{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 11;
+            grid-row-end: 12;
+        }
+        .img12{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 12;
+            grid-row-end: 13;
+        }
+        .img13{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 13;
+            grid-row-end: 14;
+        }
+        .img14{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 14;
+            grid-row-end: 15;
+        }
+        .img15{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 15;
+            grid-row-end: 16;
+        }
+        .text{
+            left: 37%;
+        }
+
+
+
+
+        }
+
+            @media screen and (max-width:670px) {
+                
+                .parent-head{
+                    width: 90%;
+            }
+            .radius2{
+                display: none;
+            }
+            .h1-design{
+                font-size: 35px;
+                left: 21%;
+            }
+            .p-div{
+                width: 100%;
+                margin-top: 0;
+            }
+
+            }
+            @media screen and (max-width:500px) {
+                .h1-design{
+                    left: 8%;
+                    top: 11%;
+                }
+                .button-p{
+                    margin-left: 18%;
+                }
+                .text{
+                    left: 19%;
+                }
+            }
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="nav">
+                <div class="logo">
+                    <img class="envato"
+                        src="./images/envato_market-dde916a48af7413e54aa058fe7ae6856752fca799da4bec355f00aea904bfa19.svg" alt="">
+                </div>
+                <button class="button">Buy now</button>
+            </div>
+        </div>
+
+        <div class="navbar2">
+            <div class="p-parent">
+                <p class="p-nav2">LIMERICK</p>
+            </div>
+            <div class="nav2">
+                <div class="icon-head">
+                    <i class="fa-brands fa-facebook-f fouji"></i>
+                    <i class="fa-brands fa-twitter fouji"></i>
+                    <i class="fa-brands fa-google-plus-g fouji"></i>
+                    <i class="fa-solid fa-p fouji"></i>
+                    <i class="fa-solid fa-globe fouji"></i>
+                </div>
+                <div class="nav3">
+                    <div class="logo1">
+                        <img class="logo-img" src="./images/logo.png" alt="">
+                    </div>
+                    <ul class="ul">
+                        <li style="color: #FF3E79;" class="lis home">HOME</li>
+                        <div class="dropdown1">
+                            <ul class="ul2">
+                                <div class="li-p">
+                                    <li class="li">Creative Home</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p">
+                                    <li class="li">Designer Home</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p">
+                                    <li class="li">Portfolio Home</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p">
+                                    <li class="li">Parallax Home</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p">
+                                    <li class="li">Carousel Home</li>
+                                    <div class="color"></div>
+
+                                </div>
+                                <div class="li-p none">
+                                    <li class="li">Header Styles</li>
+                                    <div class="color"></div>
+
+                                </div>
+                            </ul>
+                        </div>
+                        <li class="lis about">ABOUT</li>
+                        <div class="dropdown2">
+                            <ul class="ul2">
+                                <div class="li-p">
+                                    <li class="li">About Us</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p none">
+                                    <li class="li">Error Page</li>
+                                    <div class="color"></div>
+                                </div>
+
+                            </ul>
+                        </div>
+                        <li class="lis portfolio">PORTFOLIO</li>
+                        <div class="dropdown3">
+                            <ul class="ul2">
+                                <div class="li-p">
+                                    <li class="li">Portfolio Left Sidebar</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p">
+                                    <li class="li">Portfolio Right Sidebar</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p">
+                                    <li class="li">Portfolio Centered</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p">
+                                    <li class="li">Portfolio Slide</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p none">
+                                    <li class="li">Portfolio Masonery</li>
+                                    <div class="color"></div>
+
+                                </div>
+                            </ul>
+                        </div>
+                        <li class="lis blog">BLOG</li>
+                        <div class="dropdown4">
+                            <ul class="ul2">
+                                <div class="li-p">
+                                    <li class="li">Blog With Sidebar</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p">
+                                    <li class="li">Blog Grid</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p">
+                                    <li class="li">Blog List</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p">
+                                    <li class="li">Blog Masonry</li>
+                                    <div class="color"></div>
+                                </div>
+                                <div class="li-p none">
+                                    <li class="li">Blog Single</li>
+                                    <div class="color"></div>
+
+                                </div>
+                            </ul>
+                        </div>
+                        <li class="lis">CONTACT US</li>
+                        <i class="fa-solid fa-bars bar"></i>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-none">
+            <div class="nav4">
+                <div class="logo3">
+                    <img class="logo-img" src="./images/logo.png" alt="">
+                </div>
+                <button class="button-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="parent-head">
+            <p class="p1">Welcome To Limerick</p>
+            <div class="radius"></div>
+            <div class="radius2"></div>
+            <h1 class="h1-design">DESIGN YOUR M<span class="span2">I</span>ND</h1>
+            <div class="p-div">
+                <p class="p2">I like to think that my work is a living, breathing embodiment of my passion for discovery. Here’s some of it.
+                </p>
+            </div>
+            <button class="button-p">READ MORE +</button>
+        </div>
+
+
+
+    </header>
+    <section class="main2">
+        <div class="grid-parent">
+            <div class="box img1">
+                <img class="image1" src="./images/15.jpg" alt="">
+                <div class="bgk-1">
+
+                </div>
+                    <div class="text">
+                        <p class="p-text">CREATIVE PORTFOLIO</p>
+                        <p class="p2-text">Design</p>
+                    </div>
+            </div>
+            <div class="box img2">
+                <img class="image2" src="./images/16.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+            <div class="box img3">
+                <img class="image3" src="./images/17.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+            <div class="box img4">
+                <img class="image4" src="./images/18.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+
+            <div class="box img5">
+                <img class="image5" src="./images/19.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+            <div class="box img6">
+                <img class="image6" src="./images/20.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+            <div class="box img7">
+                <img class="image7" src="./images/21.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text text-7">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+            <div class="box img8">
+                <img class="image8" src="./images/22.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+
+            <div class="box img9">
+                <img class="image9" src="./images/23.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+            <div class="box img10">
+                <img class="image10" src="./images/24.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+            <div class="box img11">
+                <img class="image11" src="./images/25.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+            <div class="box img12">
+                <img class="image12" src="./images/26.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+
+            <div class="box img13">
+                <img class="image13" src="./images/27.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+            <div class="box img14">
+                <img class="image14" src="./images/28.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+            <div class="box img15">
+                <img class="image15" src="./images/29.jpg" alt="">
+                <div class="bgk-1"></div>
+                <div class="text text-15">
+                    <p class="p-text">CREATIVE PORTFOLIO</p>
+                    <p class="p2-text">Design</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="footer">
+        <!-- <div class="footer"> -->
+            <div class="last-parent">
+                <div class="logo-last">
+                    <img class="l-f" src="./images/logo.png" alt="">
+                </div>
+                <p class="p-f">© Copyright 2019 Limerick. All Rights Reserved
+                </p>
+                <div class="last-icon">
+                    <i class="fa-brands fa-facebook-f fouji"></i>
+                    <i class="fa-brands fa-twitter fouji"></i>
+                    <i class="fa-brands fa-google-plus-g fouji"></i>
+                    <i class="fa-solid fa-p fouji"></i>
+                    <i class="fa-solid fa-globe fouji"></i>
+                </div>
+            </div>
+        <!-- </div> -->
+    </section>
+   
+
+</body>
+
+</html>
